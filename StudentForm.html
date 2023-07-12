@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+  <title>Student Enrollment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+  
+    .btn-group {
+      text-align: right;
+      margin-top: 20px;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  
+    .btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollment-form">
+      <div class="form-group">
+        <label for="roll-no">Roll No.</label>
+        <input type="text" id="roll-no" name="roll-no" onchange="find(this)" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="class">Class</label>
+        <input type="text" id="class" name="class" required>
+      </div>
+      <div class="form-group">
+        <label for="birth-date">Birth Date</label>
+        <input type="date" id="birth-date" name="birth-date" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="enrollment-date">Enrollment Date</label>
+        <input type="date" id="enrollment-date" name="enrollment-date" required>
+      </div>
+      <div class="btn-group">
+        <button type="button" id="save" onclick="saveData()" class="btn" disabled>Save</button>
+        <button type="button" id="update" onclick="updateData()" class="btn" disabled>Update</button>
+        <button type="button" id="reset" onclick="disableAll()" class="btn">Reset</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
